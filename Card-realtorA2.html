@@ -1,0 +1,113 @@
+A.B
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Add the viewport meta tag for mobile responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    
+    <style>
+        /* Styling for the widget */
+        .realtor-widget {
+            max-width: 100%; /* Set a max-width to prevent overflow */
+            box-sizing: border-box; /* Include padding and border in the width calculation */
+            border: 3px solid #bcaf8a;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 0 5px #aaa;
+            background-color: #ffffff;
+            position: relative;
+        }
+        .realtor-picture {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 0 auto 10px;
+            margin-top: 20px;
+        }
+        .realtor-name {
+            font-family: Arial, sans-serif;
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+        .realtor-position {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            margin-bottom: 40px;
+            margin-top: 0;
+        }
+        .realtor-description {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            margin-top: 10px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        .social-icons {
+            margin-top: 40px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .social-icons i {
+            font-size: 24px;
+            color: #0077B5;
+            margin-bottom: 20px;
+        }
+
+        /* Custom styling for the gold icon */
+        .custom-gold-icon {
+            color: #bcaf8a;
+        }
+
+        /* Styling for the "Designed by Justin Martin" text */
+        .designed-by {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: white;
+            background-color: transparent;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="realtor-widget">
+        <img class="realtor-picture" src="https://anne-baird.c21.ca/files/2023/07/Anne-Baird-Profile-Picture-Website.jpeg" alt="Realtor's Picture">
+        <div class="realtor-name">Anne Baird</div>
+        <div class="realtor-position">Co-Owner | REALTOR &#174; </div>
+        <div class="realtor-description">
+            <strong><span class="custom-gold-icon">&#9432</span></strong> &nbsp; A Realtor is a licensed real estate professional who specializes in helping individuals buy, sell, and rent properties. Realtors are members of the Canadian Real Estate Association (CREA) and adhere to a strict code of ethics, which includes providing clients with honest and professional guidance throughout the real estate transaction process.
+        </div>
+        <div class="social-icons">
+            <a href="tel:+15198590627"><i class="fas fa-phone"></i></a>
+            <a href="https://ca.linkedin.com/in/anne-baird-b3749683" 
+target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100090545606759&mibextid=9R9pXO/" 
+target="_blank"><i class="fab fa-facebook"></i></a>
+            <!-- Replace the Instagram icon with an email icon -->
+            <a href="mailto:anne.baird@century21.ca"><i class="far fa-envelope"></i></a>
+        </div>
+        <div class="designed-by">Designed by Justin Martin</div>
+    </div>
+
+    <!-- JavaScript for resizing the iframe -->
+    <script>
+        window.addEventListener("message", function (e) {
+            if (e.data === "resize") {
+                var body = document.body,
+                    html = document.documentElement,
+                    height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+                parent.postMessage(height, "*");
+            }
+        });
+    </script>
+</body>
+</html>
